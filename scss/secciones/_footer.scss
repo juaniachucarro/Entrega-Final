@@ -1,0 +1,63 @@
+.footer {
+    position: relative;
+    bottom: 0;
+    background: rgb(230, 207, 207);
+    background: radial-gradient(circle, rgba(230, 207, 207, 1) 0%, rgba(185, 29, 29, 0.4) 100%);
+    box-sizing: border-box;
+
+    &__redes {
+        width: auto;
+
+        .fa-whatsapp {
+            color: #00a884;
+        }
+
+        .fa-instagram {
+            color: white;
+        }
+
+        .fa-twitter {
+            color: #1d9bf0;
+        }
+
+        .fa-facebook {
+            color: #1877f2;
+        }
+
+        .fa-youtube {
+            color: $rojoMain;
+        }
+
+    }
+
+    &__legales{
+        width: auto;
+        height: auto;
+        i{
+            color: $rojoMain;
+        }
+    }
+
+    &__logoContact {
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            border-radius: 90px;
+            width: 90px;
+            height: 90px;
+        }
+
+        ul {
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+        }
+    }
+
+}

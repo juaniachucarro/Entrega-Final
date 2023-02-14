@@ -1,0 +1,46 @@
+/* Catalogo */
+
+.mainCat {
+    
+    width: 70vw;
+
+    div {
+        align-items: center;
+        width: auto;
+        margin: 15px;
+        padding: 10px;
+        border: 1px solid;
+        @extend %animacionBorde;
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 10px 10px 10px $rojo60;
+
+        &:hover {
+            transition: .3s;
+            transform: scale(1.02);
+        }
+    }
+
+    img {
+        width: 350px;
+        height: 350px;
+        border-radius: 20px;
+        border: 1px solid black;
+        margin: 10px;
+    }
+
+    section {
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 25px;
+        background-color: #ebd8d8;
+    }
+
+    ul {
+        padding: 15px;
+        border: 1px solid black;
+        border-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}

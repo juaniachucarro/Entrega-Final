@@ -1,0 +1,41 @@
+@mixin estiloBotones($colorSombra, $colorFondo, $colorTexto) {
+    text-transform: capitalize;
+    text-decoration: none;
+    box-shadow: 2px 5px $colorSombra;
+    border-radius: 95px;
+    background-color: $colorFondo;
+    padding: 15px;
+    text-align: center;
+
+    & a {
+        color: $colorTexto;
+    }
+
+    &:hover {
+        color: black;
+        font-weight: 700;
+    }
+
+    &.active {
+        @extend %menuActive;
+    }
+}
+
+@mixin estiloBotonesActivos($colorSombra, $colorFondo, $colorTexto) {
+    text-transform: capitalize;
+    text-decoration: none;
+    box-shadow: 2px 5px $colorSombra;
+    border-radius: 95px;
+    background-color: $colorFondo;
+    padding: 15px;
+    text-align: center;
+
+    & a {
+        color: $colorTexto;
+        font-weight: 600;
+    }
+
+    &:hover {
+        @extend %estiloHover;
+    }
+}

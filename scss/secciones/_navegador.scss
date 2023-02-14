@@ -1,0 +1,86 @@
+.navL {
+    height: 180px;
+    width: auto;
+    background-image: url(../img/fondoNav.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    &__menu {
+
+        &__link {
+
+            @include estiloBotones($oroMain, white, black);
+
+            &:hover {
+                @extend %estiloHover;
+            }
+
+            &--logo {
+                list-style-type: none;
+                overflow: hidden;
+                border-radius: 100%;
+                background-color: white;
+
+                &:hover {
+                    @extend %estiloHover;
+                }
+            }
+
+            &__active {
+                @extend %menuActive;
+
+                &--alt {
+                    @extend %menuActive;
+                    display: none !important;
+                }
+            }
+
+            &--alt {
+                @include estiloBotones($oroMain, white, black);
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .navL {
+        height: 12vh;
+
+        &__menu {
+            margin-top: 10px;
+            height: 100%;
+            align-items: center !important;
+
+            &__link {
+
+                display: none;
+
+                &--logo {
+                    display: none;
+                }
+
+                &__active {
+                    display: none;
+
+                    &--alt {
+                        height: 60px;
+                        width: 60px;
+                        padding: auto;
+                        margin: auto;
+                        display: inline !important;
+                    }
+                }
+
+                &--alt {
+                    height: 60px;
+                    width: 60px;
+                    padding: auto;
+                    margin: auto;
+                    display: inline !important;
+                }
+            }
+        }
+    }
+}

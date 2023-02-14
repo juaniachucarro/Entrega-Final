@@ -1,0 +1,148 @@
+/* Seteo inicial */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Variables */
+@import './variables/colores';
+@import './variables/mixins';
+@import './variables/extend';
+
+
+/* Particiones */
+
+// Nav
+@import './secciones/navegador';
+
+// Header
+@import './secciones/header';
+
+// Main's
+@import './secciones/index';
+@import './secciones/quienes_somos';
+@import './secciones/catalogo';
+@import './secciones/newin';
+@import './secciones/contacto';
+
+// Footer
+@import './secciones/footer';
+
+/* Generales */
+
+body {
+    background-image: linear-gradient(to bottom, #e6cfcf, white);
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.stick {
+    position: fixed;
+    top: 90%;
+    right: 1%;
+
+    img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+h1,
+h2,
+h3,
+h5,
+p {
+    @extend %estilosTextos;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Contenedor padre  */
+
+.containerLocal {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+/* ANIMACIONES */
+
+@keyframes animacionBorder {
+    0% {
+        border: 1px solid $rojoMain;
+    }
+
+    50% {
+        border: 1px solid $oroMain;
+    }
+
+    100% {
+        border: 1px solid $rojoMain;
+    }
+}
+
+/* RESPONSIVE - MEDIA QUERY - MOBILE LAST */
+/* MOBILE LAST = MAX-WIDTH */
+
+/* DEVICE LR */
+@media (max-width: 1400px) {
+
+    .navL {
+        height: auto;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .mainEstilos div {
+        margin: 20px;
+    }
+
+    .mainQS {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 20px;
+
+        .textoQS {
+            width: 100%;
+        }
+
+        .fotoQS {
+            display: none;
+        }
+    }
+}
+
+/* DEVICE MD */
+@media (max-width: 900px) {
+    .mainEstilos div {
+        margin: 20px;
+    }
+
+    .mainQS {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 20px;
+
+        .textoQS {
+            width: 100%;
+        }
+
+        .fotoQS {
+            position: relative;
+            top: 10px;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+/* Contacto */
+
+.mainContacto {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 100px;
+
+    input, textarea {
+        border: solid 1px;
+        @extend %animacionBorde;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    
+    .mainContacto input:focus {
+        transform: scale(1.15);
+        transition: .3s;
+    }
+
+}
